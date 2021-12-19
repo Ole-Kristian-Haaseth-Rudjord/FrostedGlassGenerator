@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Frosted Glass Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/emoji/48/000000/blue-square-emoji.png">
+</head>
+<body>
+    <div id="get-code">
+        <span>&lt;div&gt;</span><br>
+        &emsp;background-color: <span id="background-color">rgba(0, 0, 0, 0.4)</span>;<br>
+        &emsp;backdrop-filter: <span id="backdrop-filter">blur(5px)</span>;<br>
+        <span>&lt;/div&gt;</span>
+    </div>
+
+    <div id="options">
+        <div id="colors">
+            <div class="text-and-lock">
+                <p>Red: <span class="span">0</span></p>
+                <input class="button-lock" type="button" value="lock">
+            </div>
+            <input class="slider" id="sliderRed" data-spanid="span1" type="range" min="0" max="255" value="0">
+
+            <div class="text-and-lock">
+                <p>Green: <span class="span">0</span></p>
+                <input class="button-lock" type="button" value="lock">
+            </div>
+            <input class="slider" id="sliderGreen" data-spanid="span2" type="range" min="0" max="255" value="0">
+
+            <div class="text-and-lock">
+                <p>Blue: <span class="span">0</span></p>
+                <input class="button-lock" type="button" value="lock">
+            </div>
+            <input class="slider" id="sliderBlue" data-spanid="span3" type="range" min="0" max="255" value="0">
+        </div>
+
+        <div id="others">
+            <div class="text-and-lock">
+                <p>Opacity: <span class="span">0.4</span></p>
+                <input class="button-lock" type="button" value="lock">
+            </div>
+            <input class="slider" data-spanid="span4" type="range" min="0" max="1" value="0.4" step="0.01">
+
+            <div class="text-and-lock">
+                <p>Blur: <span class="span">5</span></p>
+                <input class="button-lock" type="button" value="lock">
+            </div>
+            <input class="slider" data-spanid="span5" type="range" min="0" max="10" value="5" step="0.1">
+
+
+            <button id="button-random">Random</button>
+        </div>
+    </div>
+
+    <div id="box"></div>
+
+    <div id="change-background">
+        <p>Randomize background:</p>
+        <div id="change-background-seperator">
+            <div>
+                <div class="button-background" id="background-Winter"><span>Winter</span></div>
+                <div class="button-background" id="background-Sunset"><span>Sunset</span></div>
+                <div class="button-background" id="background-City"><span>City</span></div>
+            </div>
+            <div>
+                <div id="background-mountains" class="button-background"><span>Mountains</span></div>
+                <div class="button-background" id="background-Nature"><span>Nature</span></div>
+                <div class="button-background" id="background-Sea"><span>Sea</span></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="note">
+        <p>Note:<br><br>
+            1. Images are not always accurate according to its category and might not be sized properly.<br><br>
+            2. Waiting a couple seconds before changing the background gives you new random images.</p>
+        <img id="note-close" src="https://img.icons8.com/ios-glyphs/30/000000/delete-sign.png"/>
+    </div>
+</body>
+</html>
